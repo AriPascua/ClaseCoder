@@ -88,15 +88,33 @@ p{color: rgb(255, 255, 255);
     margin-right: 5rem;
    }
 
-.formulario {
+#formulario-contacto {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-flow: wrap;
+    justify-content: space-around;
     color: white;
     font-size: 2rem;
     margin-top: 5rem;
     margin-left: 5rem;
     
+}
+
+.formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 2rem;
+    column-gap: 4rem;
+    }
+.sexo {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    justify-content: space-evenly;
+}
+.submit-form{
+    display: flex;
+    justify-content: space-around;
 }
 .miembros {
     color: white;
@@ -121,10 +139,6 @@ p{color: rgb(255, 255, 255);
     width: 45.5rem;
 }
 
-.cuadro-chico {
-    width: 25rem;
-    height: 28.5rem;
-}
 
 .video-tema {
     margin: 5rem;
