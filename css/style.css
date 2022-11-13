@@ -7,14 +7,17 @@ html {
 }
 
 body{
-    background-color: rgba(2, 0, 12, 0.877);
+    background-image: linear-gradient(black, rgb(80, 1, 1))
 }
 
+.principales{
+    color: rgb(219, 95, 95);
+}
 .parte-arriba{
 display: flex;
 flex-direction: row;
 align-items: center;
-justify-content: space-between;
+justify-content: center;
 }
 
 .logo-principal {
@@ -41,6 +44,10 @@ nav{
     text-align: center;    
 }
 
+
+
+
+
 .menu-navegacion {
     height: 15rem;
     display: flex;
@@ -49,12 +56,28 @@ nav{
     border: 2px solid   rgba(153, 9, 9, 0.527);    
     font-size: 2rem;
     font-family: 'Barlow Condensed', sans-serif;
-    background-color: rgb(100, 86, 86);       
+    background-color: rgb(0, 0, 0);       
+}
+
+
+.menu-navegacion li :hover{
+    background-color: rgba(194, 15, 15, 0.801);
+    color: black;
+}
+
+@media screen and (max-width: 767px){
+    .menu-navegacion {
+        flex-direction: column;
+        padding-bottom: 8rem;
+    }
+    h1{
+        padding-right: 10rem;
+    }
+    
 }
 
 .menu-navegacion li a {
     margin-bottom: 3rem;
-    padding: 3rem;
     border: 5rem;
 }
 
@@ -140,10 +163,6 @@ p{color: rgb(255, 255, 255);
 }
 
 
-.video-tema {
-    margin: 5rem;
-}
-
 footer {
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -152,16 +171,74 @@ footer {
     text-align: center;
 }
 
-.galeria-flex {
-    height: 50rem;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    
-
+#galeria-flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    column-gap: 1rem;
 }
 
 .galeria-flex img {
     width: 30rem;
 }
+
+
+
+#contenedor-principal{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "fotos fotos"
+    "videos videos videos"
+    "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#spoti-larenga{
+    grid-area: videos;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    gap: 4rem;
+    padding: 50px;
+}
+
+.titulo-spotify {
+    text-align: center;
+}
+
+@media  screen and (max-width:900px) {
+    #spoti-larenga{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+@media screen and (max-width:700px) {
+    #spoti-larenga{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+.inicio-recital{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio-inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#inicio-ifram{
+ display: grid;
+ grid-template-columns: 1fr;
+ grid-area: video;
+ justify-content: center;
+ align-items: center;
+}
+
